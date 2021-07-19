@@ -80,7 +80,7 @@ class Kraken(Feed):
         def build(options: list):
             subscribe = partial(self.subscribe, options=options)
             conn = WSAsyncConn(self.address, self.id, **self.ws_defaults)
-            return conn, subscribe, self.message_handler
+            return conn, subscribe, self.message_handler, self.authenticate
 
         for chan in self.subscription:
             symbols = list(self.subscription[chan])
@@ -99,6 +99,7 @@ class Kraken(Feed):
                 for d in self.valid_depths:
                     if d > max_depth:
                         max_depth = d
+                        break
 
             sub['depth'] = max_depth
         if normalize_channel(self.id, chan) == CANDLES:

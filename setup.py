@@ -32,7 +32,7 @@ class Test(TestCommand):
 
 setup(
     name="cryptofeed",
-    version="1.9.2",
+    version="1.9.3",
     author="Bryant Moscon",
     author_email="bmoscon@gmail.com",
     description="Cryptocurrency Exchange Websocket Data Feed Handler",
@@ -41,7 +41,7 @@ setup(
     license="XFree86",
     keywords=["cryptocurrency", "bitcoin", "btc", "feed handler", "market feed", "market data", "crypto assets",
               "Trades", "Tickers", "BBO", "Funding", "Open Interest", "Liquidation", "Order book", "Bid", "Ask",
-              "Bitcoin.com", "Bitfinex", "bitFlyer", "BitMax", "Bitstamp", "Bittrex", "Blockchain.com", "Bybit",
+              "Bitcoin.com", "Bitfinex", "bitFlyer", "AscendEX", "Bitstamp", "Bittrex", "Blockchain.com", "Bybit",
               "Binance", "Binance Delivery", "Binance Futures", "Binance US", "BitMEX", "Coinbase", "Deribit", "EXX",
               "FTX", "FTX US", "Gate.io", "Gemini", "HitBTC", "Huobi", "Huobi DM", "Huobi Swap", "Kraken",
               "Kraken Futures", "OKCoin", "OKEx", "Poloniex", "ProBit", "Upbit"],
@@ -85,7 +85,7 @@ setup(
         "all": [
             "arctic",
             "google_cloud_pubsub>=2.4.1",
-            "gcloud_aio_pubsub"
+            "gcloud_aio_pubsub",
             "aiokafka>=0.7.0",
             "motor",
             "asyncpg",

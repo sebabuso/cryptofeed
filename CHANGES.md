@@ -1,12 +1,37 @@
 ## Changelog
 
-### 1.9.2
+### 1.9.3
+  * Bugfix: Fix demo.py
+  * Feature: Allow user to specify a delay when starting an exchange connection (useful for avoiding 429s when creating a large number of feeds)
+  * Update: Support Okex v5
+
+### 1.9.2 (2021-07-14)
   * Bugfix: add config kwarg to add_nbbo method
   * Update: changed KuCoin authentication to match new signing method
   * Bugfix: #518 - fix aggregator example code
   * Update: Support Bittrex V3
   * Feature: Add support for candles on Bittrex
-
+  * Feature: Add support to authenticate private channels (e.g. USER_FILLS) on FTX
+  * Feature: Support private rest api commands for FTX
+  * Update: Improve impl for FTX rest api
+  * Bugfix: #528 - Fix standardisation of Deribit's symbols when passed to callbacks
+  * Feature: Add support for private "orders" channel on FTX
+  * Feature: Add support for subaccounts in feeds and REST API for FTX
+  * Bugfix: Fix FTX rest api return value
+  * Exchange: New exchange - dYdX
+  * Bugfix: Issue #531 - Gemini symbol generation included closed symbols
+  * Feature: Allow user to override the score used in Redis ZSETs
+  * Update: Get information about size increment from FTX symbol data
+  * Bugfix: Fix trades write for Arctic backend
+  * Feature: new exchange: Bequant. Supports ticker, L2 book, trades, candles, plus authenticated channels: order info, account transactions and account balances
+  * Update: BitMax renamed AscendEX
+  * Bugfix: Feed level timeout and timeout interval not being set properly
+  * Exchange: Phemex exchange support
+  * Features: added support for candles, order info, account transactions and account balances to HitBTC & Bitcoin.com, plus authentication where required to access these channels
+  * Update: previous HitBTC & Bitcoin.com websocket endpoints deprecated. Now using separate Market, Trading and Account endpoints
+  * Bugfix: max_depth on Binance and Kraken was not properly used when querying the snapshot
+  * Bugfix: Handle 429s in HTTP connections (by waiting and retrying).
+  
 ### 1.9.1 (2021-06-10)
   * Feature: add Bithumb exchange - l2 book and trades
   * Bugfix: Fix inverted Poloniex symbols
